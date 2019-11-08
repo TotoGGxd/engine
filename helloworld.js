@@ -133,7 +133,7 @@ const drawScene = (gl, programInfo, buffers , deltaTime)=>{
     mat4.rotate(modelViewMatrix , 
         modelViewMatrix , 
         squareRotation ,
-        [0 , 0 , 1]);
+        [2 , 1 , 1]);
 
     {
         /*make quad*/
@@ -225,7 +225,7 @@ const render = now =>{
 
     const buffers = initBuffers(gl);
 
-    now *= 0.001;  // convert to seconds
+    now *= 2;  // convert to seconds
     const deltaTime = now - then;
     then = now;
     
